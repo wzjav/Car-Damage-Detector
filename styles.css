@@ -1,0 +1,173 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.buttons {
+    position: absolute;
+    bottom: 1px;
+    right: 40px;
+}
+
+.buttons button {
+    background-color:#3498db;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight:bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right:10px;
+}
+/*     transition: background-color 0.3s;
+ */
+h1 {
+    color: #2c3e50;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+.symptom-group {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+}
+
+label {
+    font-size: 0.95rem;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#results {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.result-section {
+    margin-bottom: 20px;
+}
+
+.problem-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-left: 3px solid #e74c3c;
+    background-color: #faf0f0;
+}
+
+.problem-title {
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+
+.severity {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.high {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.medium {
+    background-color: #f39c12;
+    color: white;
+}
+
+.low {
+    background-color: #3498db;
+    color: white;
+}
+
+.next-steps {
+    background-color: #eaf2f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+}
+.error-message {
+    color: rgb(223, 92, 92);
+    background-color: #fee2e2;
+    border-radius: 8px;
+    margin: 15px 0;
+    display: none;
+    align-items: center;
+    padding: 1px;
+    padding-left: 20px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Damage Detection</title>
+    <link rel="stylesheet" href="camera.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Car Damage Detection</h1>
+            <p>Upload or take photos of car interiors to detect potential issues</p>
+        </div>
+
+        <div class="upload-section">
+            <h2>Upload or Take a Photo</h2>
+            <div class="upload-options">
+                <button class="upload-btn" id="uploadBtn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    Upload Photo
+                </button>
+                <button class="camera-btn" id="cameraBtn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                    Take Photo
+                </button>
+            </div>
+
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+
+            <div class="preview-container hidden" id="previewContainer">
+                <img id="previewImage" class="preview-image" src="" alt="Preview">
+                <button class="analyze-btn" id="analyzeBtn" disabled>Analyze Photo</button>
+            </div>
+
+            <div class="loading-spinner" id="loadingSpinner"></div>
+            <div class="error-message" id="errorMessage">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <span id="errorText">An error occurred</span>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection">
+            <h2>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                Detected Issues
+            </h2>
+            <ul class="results-list" id="resultsList">
+                <!-- Results will be populated here -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Camera UI -->
+    <div class="camera-container hidden" id="cameraContainer">
+        <div class="camera-wrapper">
+            <video id="video" autoplay playsinline></video>
+        </div>
+        <div class="camera-controls">
+            <button class="capture-btn" id="captureBtn">Capture Photo</button>
+            <button class="close-camera-btn" id="closeCameraBtn">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Canvas for capturing photos -->
+    <canvas id="canvas"></canvas>
+
+    <script src="camera.js"></script>
+</body>
+</html>

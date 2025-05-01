@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Internal Damage Detector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+    
+        <div class="header" style="position: relative;">
+            <h1>Car Damage Detector</h1>
+            <div class="buttons" onclick="showUploadOptions()">
+                <button id="takeWithPhoto">Analyse with Photo</button>
+            </div>
+        </div>
+
+        <div id="symptom-form">
+            <div class="section">
+                <div class="section-title">Engine Symptoms</div>
+                <div class="symptom-group">
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check1" value="engine-noise">
+                            <label for="check1">Unusual engine noise</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check2" value="engine-misfire">
+                            <label for="check2">Engine misfiring</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check3" value="engine-power-loss">
+                            <label for="check3">Loss of engine power</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check4" value="engine-stalling">
+                            <label for="check4">Engine stalling</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check5" value="engine-knocking">
+                            <label for="check5">Engine knocking</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check6" value="engine-smoke">
+                            <label for="check6">Smoke from exhaust</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-title">Transmission Symptoms</div>
+                <div class="symptom-group">
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check7" value="transmission-slip">
+                            <label for="check7">Slipping transmission</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check8" value="transmission-delay">
+                            <label for="check8">Delayed engagement</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check9" value="transmission-noise">
+                            <label for="check9">Noise in neutral</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check10" value="transmission-fluid">
+                            <label for="check10">Burning smell</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check11" value="transmission-grinding">
+                            <label for="check11">Grinding when shifting</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check12" value="transmission-jerking">
+                            <label for="check12">Jerking during acceleration</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-title">Fluid/Leak Symptoms</div>
+                <div class="symptom-group">
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check13" value="fluid-coolant-leak">
+                            <label for="check13">Coolant leaks</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check14" value="fluid-oil-leak">
+                            <label for="check14">Oil leaks</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check15" value="fluid-transmission-leak">
+                            <label for="check15">Transmission fluid leaks</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check16" value="fluid-burning-smell">
+                            <label for="check16">Burning fluid smell</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check17" value="fluid-low-levels">
+                            <label for="check17">Low fluid levels</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check18" value="fluid-discoloration">
+                            <label for="check18">Fluid discoloration</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-title">Performance Symptoms</div>
+                <div class="symptom-group">
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check19" value="performance-acceleration">
+                            <label for="check19">Poor acceleration</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check20" value="performance-fuel-economy">
+                            <label for="check20">Decreased fuel economy</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check21" value="performance-vibration">
+                            <label for="check21">Unusual vibrations</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check22" value="performance-handling">
+                            <label for="check22">Poor handling</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check23" value="performance-braking">
+                            <label for="check23">Braking issues</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check24" value="performance-starting">
+                            <label for="check24">Hard starting</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-title">Warning Lights & Electronics</div>
+                <div class="symptom-group">
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check25" value="warning-check-engine">
+                            <label for="check25">Check engine light</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check26" value="warning-oil-pressure">
+                            <label for="check26">Oil pressure light</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check27" value="warning-temperature">
+                            <label for="check27">Temperature warning</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check28" value="warning-battery">
+                            <label for="check28">Battery/alternator light</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check29" value="warning-abs">
+                            <label for="check29">ABS light</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="check30" value="warning-traction">
+                            <label for="check30">Traction control light</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="error-message" style="display: none;" id="error-message">
+                <p>Please select at least one symptom to analyze.</p>
+            </div>
+
+            <button id="analyze-button">Analyze Symptoms</button>
+        </div>
+        
+        <div id="results">
+            <h2>Potential Internal Damage Assessment</h2>
+            <div id="problems-container"></div>
+            
+            <div class="next-steps">
+                <h3>Recommended Next Steps:</h3>
+                <ul id="recommendations"></ul>
+            </div>
+            
+            <button id="reset-button">Check Again</button>
+            
+            <div class="disclaimer">
+                This is a preliminary assessment tool only. For accurate diagnosis, please consult a qualified mechanic or use professional diagnostic equipment.
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
